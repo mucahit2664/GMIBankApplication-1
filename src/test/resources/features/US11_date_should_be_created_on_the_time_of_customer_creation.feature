@@ -5,7 +5,7 @@
       Given user clicks My Operation segment
       Given user click Manage Customer segment
       Given user clicks Create a new customer button
-      Given user provide valid ssn "654-65-3285"
+      Given user provide valid ssn "624-62-6314"
       Given user clicks search button
       Then user verify customer info retrieved
       Given user provide middle initials "M"
