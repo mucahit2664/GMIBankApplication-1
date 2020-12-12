@@ -20,7 +20,7 @@ import org.junit.runner.RunWith;
 //        tags = "@berati",
 //        tags = "@baris",
 //        tags = "@leyla",
-//        tags = "@mali",
+        tags = "@US11",
 //        tags = "@tugba",
 //        tags = "@deniz",
 //        tags = "@fatih",
