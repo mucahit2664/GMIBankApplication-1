@@ -11,12 +11,12 @@ import utilities.Driver;
 import utilities.GmiBankLoginMethods;
 
 public class US11_StepDefinitions {
-//    US11ElementPage us11ElementPage = new US11ElementPage();
-//
-//    @Given("user login as an {string}")
-//    public void user_login_as_an(String role)  {
-//        GmiBankLoginMethods.loginWithRole(role);
-//    }
+    US11ElementPage us11ElementPage = new US11ElementPage();
+
+    @Given("user login as an {string}")
+    public void user_login_as_an(String role)  {
+        GmiBankLoginMethods.loginWithRole(role);
+    }
 //
 //    @Given("user clicks My Operation segment")
 //    public void user_clicks_My_Operation_segment() {
