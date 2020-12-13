@@ -132,9 +132,4 @@ public class AccountPage_Steps {
                                                              });
         }
     }
-
-    @Then("close my browser")
-    public void closeMyBrowser() {
-        Driver.closeDriver();
-    }
 }
