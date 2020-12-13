@@ -1,8 +1,8 @@
 package stepdefinitions;
 
-import GMI_BANK_13.pages.AccountPage;
-import GMI_BANK_13.utilities.ConfigurationReader;
-import GMI_BANK_13.utilities.Driver;
+import pages.AccountPage;
+import utilities.ConfigurationReader;
+import utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
