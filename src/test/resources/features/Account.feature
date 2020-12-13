@@ -1,3 +1,4 @@
+@US_13
 Feature: Test Account Page Functionality
   Scenario: Go to account page
     Given Go to homepage and click user icon
