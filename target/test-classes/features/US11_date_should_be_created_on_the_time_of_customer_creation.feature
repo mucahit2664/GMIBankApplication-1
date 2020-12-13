@@ -1,4 +1,4 @@
-
+@US11
   Feature: Operation for employee
     Background: pre conditions
       Given user login as an "employee"
@@ -14,36 +14,36 @@
       Given user provide city "NewCity"
 
       Scenario:US11_TC01 The date cannot be typed earlier, in the past, at the time of creation a customer (positive)
-        Given user type the date at the time of customer creation
+        Given user select the date at the time of customer creation
         Then user validate the date is same with actual date
 
       Scenario: US11_TC01 The date cannot be typed earlier, in the past, at the time of creation a customer (negative)
-        Given user type the date earlier then customer creation time "12-10-2020"
-        Then system not allow to type earlier date to the box
+        Given user select the date earlier then customer creation
+        Then user validate error message "You can not type earlier date!"
 
       Scenario: US11_TC02 The date should be created as month, day, year, hour and minute
         Given user should provide data expected format "MM-dd-yyyy hh:mm"
         Then user validate date format as expected
 
       Scenario: US11_TC03 User can choose a user from the registration and it cannot be blank (positive)
-        Given user type the date at the time of customer creation
+        Given user select the date at the time of customer creation
         Given user select User from user box
         Then verify user is selected
 
       Scenario:  US11_TC03 User can choose a user from the registration and it cannot be blank (negative)
-        Given user type the date at the time of customer creation
+        Given user select the date at the time of customer creation
         Given user unselect any user from user box
         Given user clicks save button
         Then user see error message
 
       Scenario: US11_TC04 There user can choose an account created on manage accounts
-        Given user type the date at the time of customer creation
+        Given user select the date at the time of customer creation
         Given user select User from user box
         Given user select the account from Account box
         Then verify account is selected
-    @US11
+
       Scenario: US11_TC05 User can select Zelle Enrolled optionally and save it
-        Given user type the date at the time of customer creation
+        Given user select the date at the time of customer creation
         Given user select country from Country box
         Given user provide state to State box
         Given user select User from user box
