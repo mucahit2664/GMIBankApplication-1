@@ -16,15 +16,16 @@ import org.junit.runner.RunWith;
         features ="src/test/resources/features",
         glue = "stepdefinitions",
  //       tags = "@omer",
-//        tags = "@mahmut",
+        tags = "@mahmut",
 //        tags = "@berati",
 //        tags = "@baris",
 //        tags = "@leyla",
-        tags = "@US11",
+//        tags = "@US11",
 //        tags = "@tugba",
 //        tags = "@deniz",
 //        tags = "@fatih",
-
+//        tags = "@US_03",
+        tags = "@US_13",
         dryRun = false
 )
 public class Runner {
