@@ -18,7 +18,7 @@ import org.openqa.selenium.interactions.Action;
 
 import static utilities.Driver.getDriver;
 
-public class US14_StepDefinitions {
+public class US16_StepDefinitions {
     CustomerPage customerPage = new CustomerPage();
     TransferMoneyPage transfer = new TransferMoneyPage();
     LoginPage loginPage = new LoginPage();
