@@ -1,3 +1,4 @@
+@US_03
 Feature: Test password strength functionality
   Background:
     Given go to homepage and click user icon
@@ -34,4 +35,3 @@ Feature: Test password strength functionality
       |abcde1F! |
       |ABCDE1f! |
       |@!<.#1fA |
-      Then close browser
