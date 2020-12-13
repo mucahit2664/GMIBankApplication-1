@@ -1,7 +1,11 @@
 package utilities;
 
+import pages.US11ElementPage;
+
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.Calendar;
 import java.util.Date;
 
 public class DateUtil {
@@ -12,7 +16,7 @@ public class DateUtil {
     }
     // MM-dd-yy     --> 02-17-19
     public static String todaysDate2(){
-        String today = new SimpleDateFormat("MM-dd-yy").format(new Date());
+        String today = new SimpleDateFormat("MM-dd-yyyy").format(new Date());
         return today;
     }
     // dd-MM-yy    --> 17-02-19
@@ -30,24 +34,28 @@ public class DateUtil {
         String rightNow = new SimpleDateFormat("MM-dd-yyyy hh:mm").format(new Date());
         return rightNow;
     }
-    // MM-dd-yyyy hh:mm   --> 02-17-2019 03:45
-    public static String goToPast(String time, int count){
-        LocalDate date = LocalDate.now();
-        String past = new SimpleDateFormat("MM-dd-yyyy hh:mm").format(new Date());
-        if (time.toLowerCase().equals("day")){
-            past = String.valueOf(date.minusDays(count));
-        }
-        else if(time.toLowerCase().equals("week")){
-            past = String.valueOf(date.minusWeeks(count));
-        }
-        else if(time.toLowerCase().equals("month")){
-            past = String.valueOf(date.minusMonths(count));
-        }
-        else if(time.toLowerCase().equals("year")){
-            past = String.valueOf(date.minusYears(count));
-        }
-        return past;
+
+
+    public static String toDate() {
+        DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm");
+        Calendar cal = Calendar.getInstance();
+        cal.add(Calendar.DATE, -1);
+        return dateFormat.format(cal.getTime());
     }
+    public static void expectedDateFormat(){
+        US11ElementPage us11ElementPage = new US11ElementPage();
+        String actualDate = us11ElementPage.createDateBox.getAttribute("value");
+        String day, month, year,getYear;
+        month = actualDate.substring(0,2);  day = actualDate.substring(2,4);
+        String arr[] = actualDate.split("-");
+        for (String tempDate : arr){
+            System.out.println(tempDate);
+        }
+
+
+    }
+
+
 }
 
 

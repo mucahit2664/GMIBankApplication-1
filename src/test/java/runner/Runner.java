@@ -24,7 +24,7 @@ import org.junit.runner.RunWith;
 //        tags = "@tugba",
 //        tags = "@deniz",
 //        tags = "@fatih",
-//        tags = "@ilker",
+
         dryRun = false
 )
 public class Runner {

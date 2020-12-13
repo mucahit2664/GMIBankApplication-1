@@ -1,14 +1,16 @@
 package stepdefinitions;
 
+import groovy.json.JsonToken;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.support.ui.Select;
 import pages.US11ElementPage;
-import utilities.ConfigurationReader;
-import utilities.DateUtil;
-import utilities.Driver;
-import utilities.GmiBankLoginMethods;
+import utilities.*;
+
+import java.text.ParseException;
+import java.time.LocalDateTime;
+import java.util.Date;
 
 public class US11_StepDefinitions {
     US11ElementPage us11ElementPage = new US11ElementPage();
@@ -50,7 +52,6 @@ public class US11_StepDefinitions {
         Driver.wait(2);
         Assert.assertFalse(us11ElementPage.firstNameBox.getAttribute(ConfigurationReader.getProperty("attribute_type")).isEmpty());
         Assert.assertFalse(us11ElementPage.lastNameBox.getAttribute(ConfigurationReader.getProperty("attribute_type")).isEmpty());
-        //  Assert.assertFalse(us11ElementPage.phoneNumberBox.getAttribute(ConfigurationReader.getProperty("attribute_type")).isEmpty());
     }
 
     @Given("user provide middle initials {string}")
@@ -74,25 +75,26 @@ public class US11_StepDefinitions {
         us11ElementPage.cityBox.sendKeys(city);
     }
 
-    @Given("user select the date at the time of customer creation")
-    public void user_select_the_date_at_the_time_of_customer_creation() {
+    @Given("user type the date at the time of customer creation")
+    public void user_type_the_date_at_the_time_of_customer_creation() {
         us11ElementPage.createDateBox.sendKeys(DateUtil.getTimeNow());
+        Driver.wait(2);
+        Assert.assertFalse(us11ElementPage.createDateBox.getAttribute("value").isEmpty());
     }
 
     @Then("user validate the date is same with actual date")
-    public void user_validate_the_date_is_same_with_actual_time() {
-        Driver.wait(3);
-        Assert.assertFalse(us11ElementPage.createDateBox.getAttribute(ConfigurationReader.getProperty("attribute_type")).isEmpty());
+    public void user_validate_the_date_is_same_with_actual_time() throws ParseException {
+        Assert.assertTrue(DateUtil.getTimeNow().contains(DateUtil.todaysDate2()));
     }
 
-    @Given("user select the date earlier then customer creation")
-    public void user_select_the_date_earlier_then_customer_creation() {
-        us11ElementPage.createDateBox.sendKeys(DateUtil.goToPast("day",3));
+    @Given("user type the date earlier then customer creation time {string}")
+    public void user_type_the_date_earlier_then_customer_creation_time(String pastDate) {
+        us11ElementPage.createDateBox.sendKeys(pastDate);
     }
 
-    @Then("user validate error message {string}")
-    public void user_validate_error_message(String errorMessage) {
-        Assert.assertEquals(errorMessage,DateUtil.getTimeNow(),DateUtil.goToPast("day",3));
+    @Then("system not allow to type earlier date to the box")
+    public void system_not_allow_to_type_earlier_date_to_the_box() {
+        Assert.assertTrue(us11ElementPage.createDateBox.getAttribute("value").isEmpty());
     }
 
     @Given("user should provide data expected format {string}")
