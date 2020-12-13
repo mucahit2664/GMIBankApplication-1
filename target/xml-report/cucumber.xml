@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="9" time="182.47">
+<testcase classname="US002_user_wants_to_register_scenario_outline" name="Required_information_was_given_by_user" time="32.201">
+<system-out><![CDATA[Given user is on the website................................................passed
+When user clicks on user icon...............................................passed
+And user clicks on register button..........................................passed
+Then user enters the SSN "00000000".........................................passed
+And user enters the first name "Johannes"...................................passed
+And user enters the last name "Salvador"....................................passed
+And user enters the address "JFK Str. 19, 07558"............................passed
+And user enters the mobile phone number "000-000-0000"......................passed
+And user enters the username "JohnS"........................................passed
+And user enters the email address "johns@xyz.com"...........................passed
+And user enters the new password "johns123".................................passed
+And user enters the new password confirmation "johns123"....................passed
+And user clicks on the Register button......................................passed
+Then verify the text message................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="US002_user_wants_to_register_scenario_outline" name="Required_information_was_given_by_user_2" time="18.582">
+<system-out><![CDATA[Given user is on the website................................................passed
+When user clicks on user icon...............................................passed
+And user clicks on register button..........................................passed
+Then user enters the SSN "258-10-1905"......................................passed
+And user enters the first name ""...........................................passed
+And user enters the last name "Salvador"....................................passed
+And user enters the address "JFK Str. 19, 07558"............................passed
+And user enters the mobile phone number "000-000-0000"......................passed
+And user enters the username "JohnS"........................................passed
+And user enters the email address "johns@xyz.com"...........................passed
+And user enters the new password "johns123".................................passed
+And user enters the new password confirmation "johns123"....................passed
+And user clicks on the Register button......................................passed
+Then verify the text message................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="US002_user_wants_to_register_scenario_outline" name="Required_information_was_given_by_user_3" time="18.66">
+<system-out><![CDATA[Given user is on the website................................................passed
+When user clicks on user icon...............................................passed
+And user clicks on register button..........................................passed
+Then user enters the SSN "258-10-1905"......................................passed
+And user enters the first name "Johannes"...................................passed
+And user enters the last name ""............................................passed
+And user enters the address "JFK Str. 19, 07558"............................passed
+And user enters the mobile phone number "000-000-0000"......................passed
+And user enters the username "JohnS"........................................passed
+And user enters the email address "johns@xyz.com"...........................passed
+And user enters the new password "johns123".................................passed
+And user enters the new password confirmation "johns123"....................passed
+And user clicks on the Register button......................................passed
+Then verify the text message................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="US002_user_wants_to_register_scenario_outline" name="Required_information_was_given_by_user_4" time="18.889">
+<system-out><![CDATA[Given user is on the website................................................passed
+When user clicks on user icon...............................................passed
+And user clicks on register button..........................................passed
+Then user enters the SSN "258-10-1905"......................................passed
+And user enters the first name "Johannes"...................................passed
+And user enters the last name "Salvador"....................................passed
+And user enters the address ""..............................................passed
+And user enters the mobile phone number "000-000-0000"......................passed
+And user enters the username "JohnS"........................................passed
+And user enters the email address "johns@xyz.com"...........................passed
+And user enters the new password "johns123".................................passed
+And user enters the new password confirmation "johns123"....................passed
+And user clicks on the Register button......................................passed
+Then verify the text message................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="US002_user_wants_to_register_scenario_outline" name="Required_information_was_given_by_user_5" time="19.299">
+<system-out><![CDATA[Given user is on the website................................................passed
+When user clicks on user icon...............................................passed
+And user clicks on register button..........................................passed
+Then user enters the SSN "258-10-1905"......................................passed
+And user enters the first name "Johannes"...................................passed
+And user enters the last name "Salvador"....................................passed
+And user enters the address "JFK Str. 19, 07558"............................passed
+And user enters the mobile phone number ""..................................passed
+And user enters the username "JohnS"........................................passed
+And user enters the email address "johns@xyz.com"...........................passed
+And user enters the new password "johns123".................................passed
+And user enters the new password confirmation "johns123"....................passed
+And user clicks on the Register button......................................passed
+Then verify the text message................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="US002_user_wants_to_register_scenario_outline" name="Required_information_was_given_by_user_6" time="17.96">
+<system-out><![CDATA[Given user is on the website................................................passed
+When user clicks on user icon...............................................passed
+And user clicks on register button..........................................passed
+Then user enters the SSN "258-10-1905"......................................passed
+And user enters the first name "Johannes"...................................passed
+And user enters the last name "Salvador"....................................passed
+And user enters the address "JFK Str. 19, 07558"............................passed
+And user enters the mobile phone number "000-000-0000"......................passed
+And user enters the username "".............................................passed
+And user enters the email address "johns@xyz.com"...........................passed
+And user enters the new password "johns123".................................passed
+And user enters the new password confirmation "johns123"....................passed
+And user clicks on the Register button......................................passed
+Then verify the text message................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="US002_user_wants_to_register_scenario_outline" name="Required_information_was_given_by_user_7" time="18.231">
+<system-out><![CDATA[Given user is on the website................................................passed
+When user clicks on user icon...............................................passed
+And user clicks on register button..........................................passed
+Then user enters the SSN "258-10-1905"......................................passed
+And user enters the first name "Johannes"...................................passed
+And user enters the last name "Salvador"....................................passed
+And user enters the address "JFK Str. 19, 07558"............................passed
+And user enters the mobile phone number "000-000-0000"......................passed
+And user enters the username "JohnS"........................................passed
+And user enters the email address ""........................................passed
+And user enters the new password "johns123".................................passed
+And user enters the new password confirmation "johns123"....................passed
+And user clicks on the Register button......................................passed
+Then verify the text message................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="US002_user_wants_to_register_scenario_outline" name="Required_information_was_given_by_user_8" time="18.583">
+<system-out><![CDATA[Given user is on the website................................................passed
+When user clicks on user icon...............................................passed
+And user clicks on register button..........................................passed
+Then user enters the SSN "258-10-1905"......................................passed
+And user enters the first name "Johannes"...................................passed
+And user enters the last name "Salvador"....................................passed
+And user enters the address "JFK Str. 19, 07558"............................passed
+And user enters the mobile phone number "000-000-0000"......................passed
+And user enters the username "JohnS"........................................passed
+And user enters the email address "johns@xyz.com"...........................passed
+And user enters the new password "".........................................passed
+And user enters the new password confirmation "johns123"....................passed
+And user clicks on the Register button......................................passed
+Then verify the text message................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="US002_user_wants_to_register_scenario_outline" name="Required_information_was_given_by_user_9" time="18.873">
+<system-out><![CDATA[Given user is on the website................................................passed
+When user clicks on user icon...............................................passed
+And user clicks on register button..........................................passed
+Then user enters the SSN "258-10-1905"......................................passed
+And user enters the first name "Johannes"...................................passed
+And user enters the last name "Salvador"....................................passed
+And user enters the address "JFK Str. 19, 07558"............................passed
+And user enters the mobile phone number "000-000-0000"......................passed
+And user enters the username "JohnS"........................................passed
+And user enters the email address "johns@xyz.com"...........................passed
+And user enters the new password "johns123".................................passed
+And user enters the new password confirmation ""............................passed
+And user clicks on the Register button......................................passed
+Then verify the text message................................................passed
+]]></system-out>
+</testcase>
+</testsuite>
