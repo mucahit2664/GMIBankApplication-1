@@ -1,4 +1,4 @@
-@US11
+
   Feature: Operation for employee
     Background: pre conditions
       Given user login as an "employee"
@@ -41,7 +41,7 @@
         Given user select User from user box
         Given user select the account from Account box
         Then verify account is selected
-
+    @US11
       Scenario: US11_TC05 User can select Zelle Enrolled optionally and save it
         Given user select the date at the time of customer creation
         Given user select country from Country box

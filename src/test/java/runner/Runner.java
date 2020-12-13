@@ -22,9 +22,9 @@ import org.junit.runner.RunWith;
 //        tags = "@leyla",
 //        tags = "@mali",
 //        tags = "@tugba",
-//        tags = "@deniz",
+        tags = "@deniz",
 //        tags = "@fatih",
-//        tags = "@ilker",
+
         dryRun = false
 )
 public class Runner {
