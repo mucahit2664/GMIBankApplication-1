@@ -27,24 +27,23 @@ public class US14_StepDefinitions {
     @Then("Go to my operations")
 
     public void go_to_my_operations() {
+        Driver.wait(2);
         customerPage.my_Operation.click();
-        Driver.waitForPageToLoad(50);
-
     }
 
     @Then("Go to transfer money")
     public void go_to_transfer_money() {
         customerPage.transfer_Money.click();
-        Driver.waitForPageToLoad(50);
+        Driver.wait(2);
     }
 
     @Then("choose first account")
     public void choose_first_account() {
 
+        Driver.wait(2);
         WebElement dropdownlist = getDriver().findElement(By.id("fromAccountId"));
         Select options = new Select(dropdownlist);
-        Driver.wait(2);
-        options.selectByIndex(2);
+        options.selectByIndex(1);
         Driver.verifyElementDisplayed(By.id("fromAccountId"));
     }
 
@@ -53,15 +52,14 @@ public class US14_StepDefinitions {
 //        String path = String.valueOf(transfer.from);
 //        Omer.Dropdown_selecetBy_classname(path, "30238");
 
+        Driver.wait(2);
         WebElement dropdownlist = getDriver().findElement(By.id("toAccountId"));
         Select options = new Select(dropdownlist);
-        Driver.wait(2);
-        options.selectByIndex(2);
+        options.selectByIndex(1);
     }
 
     @Then("enter balance")
     public void enter_balance() {
-
         transfer.balance.sendKeys("30");
     }
 
@@ -83,7 +81,7 @@ public class US14_StepDefinitions {
 
     @Then("close browser")
     public void close_browser() {
-        Driver.closeDriver();
+        //   Driver.getDriver().close();
 
     }
 
@@ -91,6 +89,7 @@ public class US14_StepDefinitions {
     public void loginInCustomerAccount() {
         getDriver().get(ConfigurationReader.getProperty("gmi_login_url"));
         loginPage.usernamebox.sendKeys();
+        Driver.wait(2);
 
 
     }

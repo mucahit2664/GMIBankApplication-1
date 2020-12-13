@@ -86,6 +86,27 @@ Feature: US16
     And click on transfer money
     And receive alert description
     And close browser
+    Examples:
+      | username | password |
+      | omer__4  | omer__4  |
+      | omer__5  | omer__5  |
+      | omer__6  | omer__6  |
+      | omer__7  | omer__7  |
+      | omer__8  | omer__8  |
+      | omer__10 | omer__10 |
+
+  @smoke
+  Scenario Outline: userStory16 smoke
+    Given Login in customer account user name "<username>" and password "<password>"
+    Then Go to my operations
+    Then Go to transfer money
+    And choose first account
+    Then choose remain one
+    And enter balance
+    And enter description
+    And click on transfer money
+    And receive alert description
+    And close browser
 
 
     Examples:
@@ -96,26 +117,3 @@ Feature: US16
 #      | omer__7  | omer__7  |
 #      | omer__8  | omer__8  |
 #      | omer__10 | omer__10 |
-
-  @smoke
-  Scenario Outline: userStory16 smoke
-    Given Login in customer account user name "<username>" and password "<password>"
-    Then Go to my operations
-    Then Go to transfer money
-    And choose first account
-#    Then choose remain one
-#    And enter balance
-#    And enter description
-#    And click on transfer money
-#    And receive alert description
-    And close browser
-
-
-    Examples:
-      | username | password |
-      | omer__4  | omer__4  |
-      | omer__5  | omer__5  |
-      | omer__6  | omer__6  |
-      | omer__7  | omer__7  |
-      | omer__8  | omer__8  |
-      | omer__10 | omer__10 |

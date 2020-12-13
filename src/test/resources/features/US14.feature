@@ -86,8 +86,6 @@ Feature: US16
     And click on transfer money
     And receive alert description
     And close browser
-
-
     Examples:
       | username | password |
       | omer__4  | omer__4  |
@@ -114,8 +112,8 @@ Feature: US16
     Examples:
       | username | password |
       | omer__4  | omer__4  |
-      | omer__5  | omer__5  |
-      | omer__6  | omer__6  |
-      | omer__7  | omer__7  |
-      | omer__8  | omer__8  |
-      | omer__10 | omer__10 |
+#      | omer__5  | omer__5  |
+#      | omer__6  | omer__6  |
+#      | omer__7  | omer__7  |
+#      | omer__8  | omer__8  |
+#      | omer__10 | omer__10 |
