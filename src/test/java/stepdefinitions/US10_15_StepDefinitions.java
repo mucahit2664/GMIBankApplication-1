@@ -61,7 +61,7 @@ public class US10_15_StepDefinitions {
 
     }
 
-    @Given("user clicks save button")
+    @Given("user click save button")
     public void user_click_save_button() {
     editCustomerPage.SaveButton.submit();
     }
