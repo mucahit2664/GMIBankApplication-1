@@ -1,6 +1,6 @@
-package GMI_BANK_13.pages;
+package pages;
 import java.util.List;
-import GMI_BANK_13.utilities.Driver;
+import utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;

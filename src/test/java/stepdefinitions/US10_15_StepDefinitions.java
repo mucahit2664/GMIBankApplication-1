@@ -1,6 +1,5 @@
 package stepdefinitions;
 
-import pages.EditCustomerPage;
 import utilities.ConfigurationReader;
 import utilities.Driver;
 import io.cucumber.java.en.Given;
@@ -12,7 +11,7 @@ import org.openqa.selenium.support.ui.Select;
 import java.util.List;
 
 public class US10_15_StepDefinitions {
-    EditCustomerPage editCustomerPage = new EditCustomerPage();
+    pages.EditCustomerPage editCustomerPage = new pages.EditCustomerPage();
 
     @Given("user goes to website")
     public void user_goes_to_website() {
