@@ -33,7 +33,7 @@
       Scenario:  US11_TC03 User can choose a user from the registration and it cannot be blank (negative)
         Given user type the date at the time of customer creation
         Given user unselect any user from user box
-        Given user clicks save button
+        Given user should clicks save button
         Then user see error message
 
       Scenario: US11_TC04 There user can choose an account created on manage accounts
@@ -49,5 +49,5 @@
         Given user select User from user box
         Given user select the account from Account box
         Given user select zelle Enrolled as an option
-        Given user clicks save button
+        Given user should clicks save button
         Then validate success message "  "
