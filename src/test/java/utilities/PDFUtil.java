@@ -14,7 +14,7 @@ public class PDFUtil {
     public static void writeToPDF(List<UserWithRoles> users) {
         Document document = new Document();
        try {
-           BaseFont bf = BaseFont.createFont("ARIAL.ttf", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+           BaseFont bf = BaseFont.createFont("ARIAL.TTF", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
 
            PdfWriter.getInstance(document, new FileOutputStream("UsersWithRole.pdf"));
            document.open();
