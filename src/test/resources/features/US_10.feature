@@ -15,7 +15,7 @@
       And user clicks edit button
       And user clicks address textbox
       And user writes "Walferdange" as an address
-      And user clicks save button
+      And user click save button
       Then user asserts the registration
       Then user clicks signout
 

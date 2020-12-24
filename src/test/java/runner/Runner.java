@@ -14,19 +14,8 @@ import org.junit.runner.RunWith;
         },
         //plugin = "html:target\\default-cucumber-reports",//for windows
         features ="src/test/resources/features",
-        glue = "stepdefinitions",
-        //       tags = "@omer",
-        tags = "@TEST_GMIB_184",
-//        tags = "@berati",
-//        tags = "@baris",
-//        tags = "@leyla",tcO1,tc02,tc03,tc04,tc05,loginemployeeAndus10 //tc06,tc07,tc08,tc09, logincustomerAndus15
-//        tags = "@US11",
-//        tags = "@tugba",
-//        tags = "@deniz",
-//        tags = "@fatih",
-//        tags = "@US_03",
-//        tags = "@US_13",
-        dryRun = false
+        glue = "stepdefinitions"
+
 )
 public class Runner {
 }
