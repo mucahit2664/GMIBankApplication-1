@@ -38,20 +38,17 @@ public class US22_StepDefinitions {
 
     @Given("user save the states in correspondent file")
     public void user_save_the_states_in_correspondent_file() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
     }
 
     @Then("validate all states from the data set")
     public void validate_all_states_from_the_data_set() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
     }
 
     @Then("validate states one by one from data set")
     public void validate_states_one_by_one_from_data_set() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
     }
 
 
