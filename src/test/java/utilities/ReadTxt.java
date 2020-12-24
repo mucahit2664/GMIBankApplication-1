@@ -1,5 +1,6 @@
 package utilities;
 
+import pojos.Country;
 import pojos.Customer;
 import pojos.State;
 
@@ -63,5 +64,58 @@ public class ReadTxt {
             e.printStackTrace();
         }
         return all;
+    }
+    public static List<String> returnAllCountry(String filePath){
+        List<String> allcountries = new ArrayList<>();
+        try(BufferedReader br = new BufferedReader(new FileReader(filePath))){
+            StringBuilder sb = new StringBuilder();
+            String line = br.readLine();
+          //  System.out.println(line);
+
+            int i = 0;
+
+            while(line != null){
+                String temp = "";
+                temp = line.split(",")[0].trim();
+
+                sb.append(System.lineSeparator());
+                line = br.readLine();
+
+                  System.out.println(i++);
+
+                allcountries.add(temp);
+            }
+            String everything = sb.toString();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return allcountries;
+    }
+    public static List<Country> returnAllCountryName(String filePath){
+        List<Country> AllCountryInfo= new ArrayList<>();
+        try(BufferedReader br = new BufferedReader(new FileReader(filePath))){
+            StringBuilder sb = new StringBuilder();
+            String line = br.readLine();
+         //  System.out.println(line);
+
+            int i = 0;
+            while(line != null){
+                Country countries = new Country();
+                String temp="";
+                temp = line.split(",")[0].trim();
+
+                sb.append(System.lineSeparator());
+                line = br.readLine();
+
+               // System.out.println(i++);
+                countries.setName(temp);
+               // System.out.println(temp);
+                AllCountryInfo.add(countries);
+            }
+            String everything = sb.toString();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return AllCountryInfo;
     }
 }

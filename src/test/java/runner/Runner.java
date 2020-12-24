@@ -16,10 +16,10 @@ import org.junit.runner.RunWith;
         features ="src/test/resources/features",
         glue = "stepdefinitions",
  //       tags = "@omer",
-        tags = "@mahmut",
+  //      tags = "@mahmut",
 //        tags = "@berati",
 //        tags = "@baris",
-//        tags = "@leyla",tcO1,tc02,tc03,tc04,tc05,loginemployeeAndus10 //tc06,tc07,tc08,tc09, logincustomerAndus15
+       tags = "@ReaderOfCountries",//tcO1,tc02,tc03,tc04,tc05,loginemployeeAndus10 //tc06,tc07,tc08,tc09, logincustomerAndus15
 //        tags = "@US11",
 //        tags = "@tugba",
 //        tags = "@deniz",
