@@ -71,8 +71,8 @@ public class US21_API_StepDefinitions {
   /*  @Given("user validates all data")
     public void user_validates_all_data() {
         System.out.println(allNamesOfCountries);
-        WriteToTxt.saveAllCountry("allCountrydeneme1.txt",countries);
-        List<String>countryListforRead=ReadTxt.returnAllCountry("allCountrydeneme1.txt");
+        WriteToTxt.saveAllCountry("allCountrydeneme2.txt",countries);
+        List<String>countryListforRead=ReadTxt.returnAllCountry("allCountrydeneme2.txt");
         System.out.println(countryListforRead);
         Assert.assertEquals("not verify",allNamesOfCountries,countryListforRead);
 
