@@ -5,3 +5,4 @@ Feature: All users (user, employee, manager or admin) should be printed as a pdf
     Given user sets database connection
     And user reads first name last name and role from database
     And user writes the read data to pdf file
+    Then verify the users in PDF file with DB
