@@ -14,8 +14,17 @@ import org.junit.runner.RunWith;
         },
         //plugin = "html:target\\default-cucumber-reports",//for windows
         features ="src/test/resources/features",
-        glue = "stepdefinitions"
+        glue = "stepdefinitions",
 
+//        tags = "@berati",
+//        tags = "@baris",
+//       tags = "@US11",
+//        tags = "@tugba",
+//        tags = "@deniz",
+//        tags = "@fatih",
+//        tags = "@US_03",
+        tags = "@US22",
+        dryRun = false
 )
 public class Runner {
 }

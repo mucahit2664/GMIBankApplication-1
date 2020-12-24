@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="2" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="6.974">
+<testcase classname="read and validate states" name="Read and validate the states with api end point from data set" time="4.869">
+<failure message="The scenario has pending or undefined step(s)" type="io.cucumber.java.PendingException"><![CDATA[Given user sets end point to response "https://www.gmibank.com/api/tp-states".passed
+Given user generate states..................................................passed
+And user save the states in correspondent file..............................pending
+Then validate all states from the data set..................................skipped
+]]></failure>
+</testcase>
+<testcase classname="read and validate states" name="Read and validate the states with api end point one by one" time="1.25">
+<failure message="The scenario has pending or undefined step(s)" type="io.cucumber.java.PendingException"><![CDATA[Given user sets end point to response "https://www.gmibank.com/api/tp-states".passed
+Given user generate states..................................................passed
+And user save the states in correspondent file..............................pending
+Then validate states one by one from data set...............................skipped
+]]></failure>
+</testcase>
+</testsuite>
