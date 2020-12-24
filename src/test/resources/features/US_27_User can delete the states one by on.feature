@@ -1,8 +1,12 @@
 Feature: US_27_TEST1_User can delete the states one by one
 
-	@TEST_GMIB_184
-	Scenario: US_27_TEST1_User can delete the states one by one
-		Given user sets end point to response "https://www.gmibank.com/api/tp-states"
-		And Verify the HTTP Status code
-		And Send a DELETE request to REST API endpoint and delete the selected states
+	@deniz1
+	Scenario Outline: US_27_TEST1_User can delete the states one by one
+		Given user sets the end point to response "https://www.gmibank.com/api/tp-states"
+		And user deserializes all states data to Java
+		Then  Delete states with "<index>"
 		Then Verify the state has been deleted
+		Examples:
+			| index    |
+			| 2        |
+			| 2        |

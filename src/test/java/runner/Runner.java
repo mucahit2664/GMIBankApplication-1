@@ -20,10 +20,10 @@ import org.junit.runner.RunWith;
 //        tags = "@baris",
 //       tags = "@US11",
 //        tags = "@tugba",
-//        tags = "@deniz",
+//        tags = "@deniz1",
 //        tags = "@fatih",
-//        tags = "@US_03",
         tags = "@US22",
+
         dryRun = false
 )
 public class Runner {
