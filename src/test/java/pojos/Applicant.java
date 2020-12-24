@@ -93,4 +93,18 @@ public class Applicant {
     public void setCreateDate(String createDate) {
         this.createDate = createDate;
     }
+
+    @Override
+    public String toString() {
+        return  getId()+"~"+
+                getSsn()+"~"+
+                getUserId()+"~"+
+                getUserName()+"~"+
+                getEmail()+"~"+
+                getFirstName()+"~"+
+                getLastName()+"~"+
+                getMobilePhoneNumber()+"~"+
+                getAddress()+"~"+
+                getCreateDate();
+    }
 }
