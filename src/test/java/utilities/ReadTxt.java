@@ -9,7 +9,9 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 import java.util.stream.Collectors;
 
 public class ReadTxt {
@@ -129,5 +131,13 @@ public class ReadTxt {
             Assert.assertEquals(expectedData.get(i).split("@")[0],states[i].getId().toString());
 
         }
+    }
+    public static String readRandomDataFromList(String fileName, State[] states) throws Exception {
+        BufferedReader bufferedReader = new BufferedReader(new FileReader(fileName));
+        List<String> expectedData = bufferedReader.lines().collect(Collectors.toList());
+        Random r = new Random();
+        int randomIndex = r.nextInt(expectedData.size());
+        String expectedStateName = String.valueOf(states[randomIndex]);
+        return expectedStateName;
     }
 }

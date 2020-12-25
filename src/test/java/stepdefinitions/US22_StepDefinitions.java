@@ -14,6 +14,7 @@ import utilities.WriteToTxt;
 
 import java.io.IOException;
 import java.util.Arrays;
+import java.util.Random;
 
 import static io.restassured.RestAssured.given;
 
@@ -21,7 +22,7 @@ public class US22_StepDefinitions {
 
     Response response;
     State states[];
-    String fileName = "AllStateData.txt";
+    String fileName = "AllStatesData.txt";
 
     @Given("user sets end point to response {string}")
     public void user_sets_end_point_to_response(String url) {
@@ -55,14 +56,10 @@ public class US22_StepDefinitions {
     }
 
     @Then("validate states one by one")
-    public void validate_states_one_by_one() {
+    public void validate_states_one_by_one() throws Exception {
+
         SoftAssert softAssert = new SoftAssert();
-        softAssert.assertTrue(Arrays.toString(states).contains(states[3].getName()));
-        softAssert.assertTrue(Arrays.toString(states).contains(states[35].getName()));
-        softAssert.assertTrue(Arrays.toString(states).contains(states[80].getName()));
-        softAssert.assertTrue(Arrays.toString(states).contains(states[150].getName()));
-        softAssert.assertTrue(Arrays.toString(states).contains(states[300].getName()));
-        softAssert.assertTrue(Arrays.toString(states).contains(states[states.length-1].getName()));
+        softAssert.assertTrue(Arrays.toString(states).contains(ReadTxt.readRandomDataFromList(fileName,states)));
         softAssert.assertAll();
     }
 
