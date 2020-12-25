@@ -6,12 +6,10 @@ import pojos.Customer;
 import pojos.State;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class ReadTxt {
@@ -139,5 +137,30 @@ public class ReadTxt {
         int randomIndex = r.nextInt(expectedData.size());
         String expectedStateName = String.valueOf(states[randomIndex]);
         return expectedStateName;
+    }
+
+    public static List<Country> readAllCountries(String fileName) {
+        List<Country> countries= new ArrayList<>();
+        try {
+            File myObj = new File(fileName);
+            Scanner myReader = new Scanner(myObj);
+            while (myReader.hasNextLine()) {
+                Country country  = new Country();
+                String data = myReader.nextLine();
+                //  System.out.println(data);
+                String [] temp = data.split(",");
+
+                country.setId(Integer.parseInt(temp[0]));
+                country.setName(temp[1]);
+                country.setStates(temp[2]);
+
+                countries.add(country);
+            }
+            myReader.close();
+        } catch (FileNotFoundException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+        return countries;
     }
 }

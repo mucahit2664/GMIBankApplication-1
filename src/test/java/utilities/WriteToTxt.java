@@ -54,4 +54,19 @@ public static void saveAllStates(String fileName, State[] states){
             bufferedWriter.flush();//memory bosaltiyor
             bufferedWriter.close();//isimiz bitince kapatmamiz gerek
         }
+
+    public static void allCountriesData(String fileName, Country[] countries) {
+        try {
+            FileWriter myWriter = new FileWriter(fileName);
+            for (int i = 0; i < countries.length; i++) {
+                myWriter.write(countries[i].getId()+",");
+                myWriter.write(countries[i].getName()+",");
+                myWriter.write(countries[i].getStates()+",\n");
+            }
+            myWriter.close();
+            System.out.println("countries Successfully wrote to the file.");
+        } catch (Exception e) {
+            System.out.println("An error occurred.");   e.printStackTrace();
+        }
+    }
 }

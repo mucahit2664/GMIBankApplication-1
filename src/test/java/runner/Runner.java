@@ -22,6 +22,8 @@ import org.junit.runner.RunWith;
 
 //        tags = "@leyla",
 //        tags = "@mali",
+        //tags = "@countryUpdate"
+
 
        tags = "@ReaderOfCountries",//tcO1,tc02,tc03,tc04,tc05,loginemployeeAndus10 //tc06,tc07,tc08,tc09, logincustomerAndus15
 //        tags = "@US11",
