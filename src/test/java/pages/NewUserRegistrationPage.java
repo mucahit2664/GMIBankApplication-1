@@ -3,12 +3,12 @@ package pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import utilities.Mahmut;
+import utilities.Driver2;
 
 public class NewUserRegistrationPage {
 
     public NewUserRegistrationPage() {
-        PageFactory.initElements(Mahmut.getDriver(), this);}
+        PageFactory.initElements(Driver2.getDriver(), this);}
 
     @FindBy(xpath = "//li[@id='account-menu']")
     public WebElement userIcon;

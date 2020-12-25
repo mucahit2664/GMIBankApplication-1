@@ -1,18 +1,28 @@
 package stepdefinitions;
 
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import org.testng.asserts.SoftAssert;
+import pojos.State;
 import utilities.ConfigurationReader;
+import utilities.ReadTxt;
+import utilities.WriteToTxt;
+
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.Random;
 
 import static io.restassured.RestAssured.given;
 
 public class US22_StepDefinitions {
 
     Response response;
-
+    State states[];
+    String fileName = "AllStatesData.txt";
 
     @Given("user sets end point to response {string}")
     public void user_sets_end_point_to_response(String url) {
@@ -29,27 +39,28 @@ public class US22_StepDefinitions {
                 .contentType(ContentType.JSON)
                 .extract()
                 .response();
-        response.prettyPrint();
-    }
-    @Given("user generate states")
-    public void user_generate_states() {
-
+     //   response.prettyPrint();
     }
 
-    @Given("user save the states in correspondent file")
-    public void user_save_the_states_in_correspondent_file() {
+    @Given("user de-serialize the data")
+    public void user_de_serialize_the_data() throws Exception {
+      ObjectMapper objectMapper = new ObjectMapper();
+        states = objectMapper.readValue(response.asString(),State[].class);
 
     }
 
-    @Then("validate all states from the data set")
-    public void validate_all_states_from_the_data_set() {
-
+    @Then("validate states from the data set")
+    public void validate_states_from_the_data_set() throws Exception {
+        WriteToTxt.writeAllStatesInFile(fileName,states);
+        ReadTxt.readAndValidateStates(fileName,states);
     }
 
-    @Then("validate states one by one from data set")
-    public void validate_states_one_by_one_from_data_set() {
+    @Then("validate states one by one")
+    public void validate_states_one_by_one() throws Exception {
 
+        SoftAssert softAssert = new SoftAssert();
+        softAssert.assertTrue(Arrays.toString(states).contains(ReadTxt.readRandomDataFromStateList(fileName,states)));
+        softAssert.assertAll();
     }
-
 
 }
