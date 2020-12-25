@@ -1,13 +1,16 @@
 package utilities;
 
+import org.junit.Assert;
 import pojos.Country;
 import pojos.Customer;
 import pojos.State;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class ReadTxt {
 
@@ -117,5 +120,14 @@ public class ReadTxt {
             e.printStackTrace();
         }
         return AllCountryInfo;
+    }
+    public static void readAndValidateStates(String fileName, State[] states) throws Exception {
+        BufferedReader bufferedReader = new BufferedReader(new FileReader(fileName));
+        List<String> expectedData = bufferedReader.lines().collect(Collectors.toList());
+        for (int i = 0; i <states.length ; i++) {
+
+            Assert.assertEquals(expectedData.get(i).split("@")[0],states[i].getId().toString());
+
+        }
     }
 }

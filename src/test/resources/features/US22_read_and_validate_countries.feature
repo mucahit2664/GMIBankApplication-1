@@ -3,13 +3,13 @@
     Background: sets api end point to response
       Given user sets end point to response "https://www.gmibank.com/api/tp-states"
 
-    Scenario: Read and validate the states with api end point from data set
-      Given user generate states
-      And user save the states in correspondent file
-      Then validate all states from the data set
+    Scenario:US22_TC01 Read and validate the states with api end point from data set
+      And user de-serialize the data
+      Then validate states from the data set
 
-    Scenario: Read and validate the states with api end point one by one
-      Given user generate states
-      And user save the states in correspondent file
-      Then validate states one by one from data set
+    Scenario:US22_TC02 Read and validate the states with api end point one by one
+      And user de-serialize the data
+      Then validate states one by one
+
+
 
