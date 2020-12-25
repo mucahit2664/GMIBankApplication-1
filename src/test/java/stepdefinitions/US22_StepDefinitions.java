@@ -59,7 +59,7 @@ public class US22_StepDefinitions {
     public void validate_states_one_by_one() throws Exception {
 
         SoftAssert softAssert = new SoftAssert();
-        softAssert.assertTrue(Arrays.toString(states).contains(ReadTxt.readRandomDataFromList(fileName,states)));
+        softAssert.assertTrue(Arrays.toString(states).contains(ReadTxt.readRandomDataFromStateList(fileName,states)));
         softAssert.assertAll();
     }
 

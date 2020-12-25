@@ -132,7 +132,7 @@ public class ReadTxt {
 
         }
     }
-    public static String readRandomDataFromList(String fileName, State[] states) throws Exception {
+    public static String readRandomDataFromStateList(String fileName, State[] states) throws Exception {
         BufferedReader bufferedReader = new BufferedReader(new FileReader(fileName));
         List<String> expectedData = bufferedReader.lines().collect(Collectors.toList());
         Random r = new Random();
