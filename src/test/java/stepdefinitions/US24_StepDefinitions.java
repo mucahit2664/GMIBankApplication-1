@@ -21,7 +21,7 @@ public class US24_StepDefinitions {
         response = given().
                 auth().
                 oauth2(ConfigurationReader.getProperty("token")).
-                when().get(ConfigurationReader.getProperty("state_api_endpoint"));
+                when().get(endpoint);
         // response.prettyPrint();
     }
     @When("user verify status code {int} and content type JSon")

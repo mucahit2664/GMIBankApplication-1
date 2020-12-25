@@ -47,7 +47,7 @@ public class US20_stepdefinitions {
         List<String> expectedData = bufferedReader.lines().collect(Collectors.toList());
         for (int i = 0; i <allCustomerData.length ; i++) {
 
-            Assert.assertEquals(expectedData.get(i).split("#")[0],allCustomerData[i].getId().toString());
+            Assert.assertEquals(expectedData.get(i).split("#")[0],Integer.toString(allCustomerData[i].getId()));
 
         }
 
