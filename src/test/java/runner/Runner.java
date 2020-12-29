@@ -16,7 +16,7 @@ import org.junit.runner.RunWith;
         features ="src/test/resources/features",
         glue = "stepdefinitions",
  //       tags = "@omer",
-        tags = "@mahmut",
+//        tags = "@mahmut",
 //        tags = "@berati",
 //        tags = "@baris",
 //        tags = "@leyla",tcO1,tc02,tc03,tc04,tc05,loginemployeeAndus10 //tc06,tc07,tc08,tc09, logincustomerAndus15
@@ -26,7 +26,9 @@ import org.junit.runner.RunWith;
 //        tags = "@fatih",
 //        tags = "@US_03",
 //        tags = "@US_13",
-        dryRun = false
+        tags = "@US17",
+        dryRun = false,
+        monochrome  = true
 )
 public class Runner {
 }
