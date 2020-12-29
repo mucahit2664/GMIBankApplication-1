@@ -7,7 +7,7 @@ import org.junit.Assert;
 import pages.NewUserRegistrationPage;
 import utilities.ConfigurationReader;
 import utilities.Driver;
-import utilities.Mahmut;
+import utilities.Driver2;
 
 public class US02_StepDefinitions {
 
@@ -15,7 +15,7 @@ public class US02_StepDefinitions {
 
     @Given("user is on the website")
     public void user_is_on_the_website() {
-        Mahmut.getDriver().get(ConfigurationReader.getProperty("website"));
+        Driver2.getDriver().get(ConfigurationReader.getProperty("website"));
     }
 
     @When("user clicks on user icon")
