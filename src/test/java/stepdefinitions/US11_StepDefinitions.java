@@ -125,8 +125,8 @@ public class US11_StepDefinitions {
         Assert.assertTrue(us11ElementPage.userBox.getAttribute(ConfigurationReader.getProperty("attribute_type")).isEmpty());
     }
 
-    @Given("user clicks save button")
-    public void user_clicks_save_button() {
+    @Given("user should clicks save button")
+    public void user_should_clicks_save_button() {
         us11ElementPage.saveButton.click();
     }
 

@@ -9,9 +9,9 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 
 import java.util.concurrent.TimeUnit;
 
-public class Mahmut {
+public class Driver2 {
 
-    public Mahmut() { }
+    public Driver2() { }
 
     private static WebDriver driver;
 

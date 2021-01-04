@@ -1,3 +1,5 @@
+
+@US23
 Feature: Read all applicant data
   Background: Api endpoint is being set
     Given user provides api endpoint to set response using "https://www.gmibank.com/api/tp-account-registrations"
