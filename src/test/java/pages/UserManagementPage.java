@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.IntStream;
 
 public class UserManagementPage {
     WebDriver driver;
@@ -42,7 +43,7 @@ public class UserManagementPage {
     @FindBy(xpath = "//td[2]")
     public List<WebElement> rowIds;
 
-    @FindBy(xpath = "//td[6]//span")
+    @FindBy(xpath = "//span[@class='badge badge-info']")
     public List<WebElement> userRoles;
 
     @FindBy(xpath = "//a[@aria-label = 'Next']")
@@ -193,6 +194,36 @@ public class UserManagementPage {
         } else {
             return output;
         }
+    }
+
+    /*
+    Search user role in profiles column and return first founded rowId corresponding user role
+    If it can not be founded than go through next page and search in
+     */
+    public String findIdOfRow(String typeOfUserRole) {
+        int index = IntStream.range(0, userRoles.size())
+                             .filter(i -> userRoles.get(i).getText().contains(typeOfUserRole.toUpperCase()))
+                             .findFirst()
+                             .orElse(-1);
+
+        if (index != -1) {
+            return rowIds.get(index).getText();
+        }else {
+            nextPage.click();
+            Driver.wait(3);
+            return findIdOfRow(typeOfUserRole);
+        }
+    }
+
+    /*
+        This method collects all rows elements in list and return all web elements in a selected row
+        Key   : rowId as String
+        Value : all web elements in rows corresponding rowId
+
+        //tr[@id='example2ek']/td --> list of web elements in a row which ids' is 'example2ek'
+    */
+    public List<WebElement> rowElements(String rowId){
+        return Driver.getDriver().findElements(By.xpath("//tr[@id='" + rowId + "']/td"));
     }
 
     public String getLocatorFromWebElement(WebElement element) {
